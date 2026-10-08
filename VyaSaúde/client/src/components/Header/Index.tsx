@@ -1,52 +1,65 @@
 import './Index.css';
 import { getUser } from '../../helpers/auth.js';
 import { useNavigate } from 'react-router-dom';
-import { useEffect, useState } from 'react';
+import { useCallback, useEffect, useState } from 'react';
 import logo from "../../../public/logo.svg";
 import placeholder from "../../../public/placeholder.png";
 import { IoMdExit } from "react-icons/io";
 
+interface Usuario {
+   cpf: string;
+   data_criacao: string;
+   email: string;
+   nome: string;
+   tipoUsuario: string;
+}
+
 function Header() {
+   const [carregando, setCarregando] = useState(true);
+
    const navigate = useNavigate();
 
-   const [usuario, setUsuario] = useState();
+   const handleLogout = useCallback(() => {
+      navigate("/login");
+      sessionStorage.removeItem("token");
+   }, [navigate]);
+
+   const [usuario, setUsuario] = useState<Usuario | null>(() => {
+      const usuarioLogado = getUser() as Usuario;
+      return usuarioLogado || null;
+   });
 
    useEffect(() => {
       function obterUsuario() {
-         const usuario = getUser();
+         const usuario = getUser() as Usuario;
          setUsuario(usuario);
+         setCarregando(false);
       }
       obterUsuario();
    }, []);
 
 
    useEffect(() => {
-      async function redirecionar() {
-         if (usuario === null) {
+      async function deslogar() {
+         if (!carregando && !usuario) {
             handleLogout();
          }
       }
-      redirecionar();
-   }, [usuario === null]);
+      deslogar();
+   }, [carregando, usuario, handleLogout]);
 
 
-   const homeNavigate = () => {     //  Função pra redirecionar pra Home de acordo com o usuário
-      if (usuario.tipoUsuario) {
-         navigate(`/${usuario.tipoUsuario}_home`);
+   const homeNavigate = () => {
+      if (usuario?.tipoUsuario) {
+         navigate(`/${usuario.tipoUsuario}/home`);
       }
    };
 
    const profileNavigate = () => {
-      if (usuario.tipoUsuario) {
-         navigate(`/${usuario.tipoUsuario}_perfil`);
+      if (usuario?.tipoUsuario) {
+         navigate(`/${usuario.tipoUsuario}/perfil`);
       }
    }
-
-   
-   const handleLogout = () => {     //  Função pra remover o token quando deslogar, e redirecionar pra tela de Login
-      navigate("/login");
-      sessionStorage.removeItem("token");
-   };
 
 
    return (

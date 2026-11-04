@@ -1,0 +1,15 @@
+@use "../abstracts/variables" as *;
+
+body {
+   font-family: $font-primary;
+   // font-weight: $fw-regular;
+   font-size: 1rem;
+   line-height: 1.5;
+   -webkit-font-smoothing: antialiased;
+   letter-spacing: -0.2px;
+}
+
+h1, h2, h3, h4, h5, h6 {
+   font-family: $font-secondary;
+   font-weight: $fw-regular;
+}

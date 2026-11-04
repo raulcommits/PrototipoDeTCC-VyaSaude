@@ -300,7 +300,7 @@ function Admin_histVisitas() {
                                     </td>
                                  <td>  {/* Modal a ser reconsiderado */}
                                     <div className="table-icons" onClick={() => setEditarRegistro(true)}>
-                                       <img src={'client/public/edit.svg'}/>
+                                       <img src={'@icons/edit.svg'}/>
                                     </div>
                                  </td>
                               </tr>

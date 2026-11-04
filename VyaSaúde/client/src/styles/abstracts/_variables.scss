@@ -1,0 +1,31 @@
+$font-primary: 'Inter', system-ui, sans-serif;
+$font-secondary: 'Montserrat', system-ui, sans-serif;
+
+$fw-regular: 400;
+$fw-medium: 500;
+$fw-semi-bold: 600;
+$fw-bold: 700;
+$fw-extra-bold: 800;
+
+$branco: #fff;
+$cinza-claro: #ECECEC;
+$cinza-escuro: #212529;
+$font-color: #212529;
+
+$azul: #0000EE;
+$azul-claro: #cae8ff; // login
+$azul-medio: #bbd9e8; // header
+$azul-mediano: #7198b8; // header
+$azul-acinzentado: #B0C2D8; // cards buttom
+$azul-acinzentado-medio: #59808F; // cards
+$azul-escuro: #00009E;
+$navy: #292157;
+
+$verde-claro: #D6F2D6; // login
+$verde-medio: #5d8a5d; //header
+$verde-pastel: #b9dcb9; // cards
+$verde-escuro: #3B653C; // sidenav-corpo
+
+$gradient-login: linear-gradient(90deg, $verde-claro 0%, $azul-claro 100%); // login
+$gradient-header: linear-gradient(to right, $verde-medio, $azul-mediano); // header
+$gradient-card: linear-gradient(90deg, $verde-pastel 63%, $azul-acinzentado-medio 100%); // cards

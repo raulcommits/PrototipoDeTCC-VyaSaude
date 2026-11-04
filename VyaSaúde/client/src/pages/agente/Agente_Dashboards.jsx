@@ -12,8 +12,8 @@ import UserManagerIcon from '../../components/Sidenav/iconsSideBar/UserManagerIc
 import query from '../../components/Sidenav/iconsSideBar/query.png';
 import dashIcon from '../../components/Sidenav/iconsSideBar/dashIcon.png';
 import SmallBarChart from '../../components/SmallBarChart/SmallBarChart.jsx';
-import zoom from '../../../public/zoom.svg';
-import close from '../../../public/close.svg';
+import zoom from '@icons/zoom.svg';
+import close from '@icons/close.svg';
 
 function Agente_Dashboards() {
    const [usuario, setUsuario] = useState(null);

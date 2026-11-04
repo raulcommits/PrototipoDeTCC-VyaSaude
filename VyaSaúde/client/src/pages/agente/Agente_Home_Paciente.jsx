@@ -1,4 +1,4 @@
-import "../../App.css";
+import "../../App.scss";
 import "./Agente.css";
 import Header from "../../components/Header/Index.jsx";
 import Sidenav from "../../components/Sidenav/Index.tsx";

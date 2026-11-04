@@ -1,38 +1,44 @@
-@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,700;1,800&display=swap');
+/*# sourceMappingURL=App.css.map */
+@use './styles/abstracts/variables' as *;
+
 .titulosEstilo2 {
-  font-family: "Montserrat", sans-serif;
-  font-optical-sizing: auto;
-  font-weight: 800;
-  font-style: normal;
-}
-.titulosEstilo3 {
    font-family: "Montserrat", sans-serif;
    font-optical-sizing: auto;
-   font-weight: bolder;
+   font-weight: $fw-extra-bold;
    font-style: normal;
 }
 
-body {
-   height: 100dvh;
+.titulosEstilo3 {
+   font-family: "Montserrat", sans-serif;
+   font-optical-sizing: auto;
+   font-weight: $fw-bold;
+   font-style: normal;
 }
 
 html {
    height: 100dvh;
    user-select: none;
+
+   body {
+      height: 100dvh;
+   }
 }
 
-/* Estilização global */ 
+/* Estilização global */
 input::-webkit-outer-spin-button,
-input::-webkit-inner-spin-button { /* Remover setas dos inputs(Chrome, Chromium-browsers)*/ 
+input::-webkit-inner-spin-button {
+   /* Remover setas dos inputs(Chrome, Chromium-browsers)*/
    -webkit-appearance: none;
 }
 
-input[type=number] { /* Remover setas dos inputs(Firefox) */ 
-  -moz-appearance: textfield;
-  appearance: textfield;
+input[type=number] {
+   /* Remover setas dos inputs(Firefox) */
+   -moz-appearance: textfield;
+   appearance: textfield;
 }
 
-input, select{
+input,
+select {
    height: 40px;
    margin: 0.8dvh;
    box-shadow: 2px 2px 10px 1px #c7c7c7a6 !important;
@@ -40,7 +46,7 @@ input, select{
 }
 
 button {
-   box-shadow: 1px 1px 15px 1px rgba(199, 199, 199, 0.85);
+   box-shadow: 1px 1px 15px 1px #c7c7c7d9;
 }
 
 .title_Home {
@@ -55,21 +61,18 @@ button {
    height: 50px;
 }
 
-.title-pages { /* Cabeçalho contendo botão de voltar e título da página */
+.title-pages {
+   /* Cabeçalho contendo botão de voltar e título da página */
    display: flex;
    text-align: center;
    align-items: center;
-   padding: 3dvh 0;
+   padding: 2dvh 0;
    width: 100%;
-   
+
    svg {
       cursor: pointer;
       width: 4rem;
       height: 2rem;
-   }
-
-   h1 {
-      margin: 0;
    }
 }
 
@@ -79,40 +82,43 @@ button {
    padding-top: 4px;
    padding-bottom: 4px;
    flex-shrink: 0;
-   
+
    .shortcutClick {
       background-color: #000000;
       color: #fff;
       padding: 17px 30px 0 30px;
-      
+
       border: solid 3px #000000;
       border-bottom: solid 5px #000000;
       border-radius: 30px;
    }
+
    .shortcutClick:hover {
       background-color: #39a742;
    }
 }
 
 .paciente-home {
-   grid-template-columns: repeat(3, auto) !important; /* 3 colunas iguais */
-   grid-template-rows: repeat(2, auto) !important;  /* 2 linhas */
+   grid-template-columns: repeat(3, auto) !important;
+   /* 3 colunas iguais */
+   grid-template-rows: repeat(2, auto) !important;
+   /* 2 linhas */
 }
 
 
 .simpleBoxShadow {
    background-color: #ffffff;
-   
+
    padding: 50px;
-   
+
    border-radius: 20px;
    border: none;
-   
+
    display: flex;
    align-items: center;
    justify-content: center;
    flex-direction: column;
-   
+
    box-shadow: 0px 8px 37px -14px #0000003d;
    -webkit-box-shadow: 0px 8px 37px -14px #0000003d;
    -moz-box-shadow: 0px 8px 37px -14px #0000003d;
@@ -120,15 +126,15 @@ button {
 
 .content-login_app-css {
    user-select: none;
-   
+
    height: 100vh;
    width: 100%;
-   
+
    display: flex;
    flex-direction: column;
    justify-content: center;
    align-items: center;
-   
+
    background-color: #39a742;
    background: #a7dba7;
    background: linear-gradient(90deg, #d6f2d6 0%, #cae8ff 100%);
@@ -139,14 +145,15 @@ button {
    border-radius: 20px;
    padding: 50px 80px 50px 80px;
    border: none;
-   
+
    box-shadow: 0px 8px 37px -14px #0000003d;
    -webkit-box-shadow: 0px 8px 37px -14px #0000003d;
    -moz-box-shadow: 0px 8px 37px -14px #0000003d;
    transition: box-shadow 0.3s ease-in-out, -webkit-box-shadow 0.3s ease-in-out, -moz-box-shadow 0.3s ease-in-out;
 }
 
-.content-home { /* Telas de Home */ 
+.content-home {
+   /* Telas de Home */
    display: flex;
    flex-direction: column;
    justify-content: flex-start;
@@ -157,13 +164,15 @@ button {
    width: calc(100vw - 300px);
 }
 
-.content-pages { /* Demais telas */ 
+.content-pages {
+   /* Demais telas */
    align-items: center;
    margin-left: 300px;
    margin-top: 10vh;
    height: calc(100vh - 10vh);
    left: 300px;
-   padding: 40px; /* espaço interno maior para separar do header/sidenav */
+   padding: 40px;
+   /* espaço interno maior para separar do header/sidenav */
    box-sizing: border-box;
 }
 
@@ -171,7 +180,7 @@ button {
    margin-top: 20px;
    display: flex;
    gap: 10px;
-   
+
    .directAccessButton {
       background-color: #fff;
       border-radius: 20px;
@@ -182,6 +191,7 @@ button {
       border-bottom: solid 3px #b8b2b2;
       padding: 5px 20px;
    }
+
    .directAccessButton:hover {
       background-color: #ffe96c;
    }
@@ -216,8 +226,10 @@ button {
    border: solid gray 2px;
    border-radius: 25px;
    background-color: #d4d4d4;
-   grid-template-columns: repeat(4, auto); /* 3 colunas iguais */
-   grid-template-rows: repeat(2, auto);  /* 2 linhas */
+   grid-template-columns: repeat(4, auto);
+   /* 3 colunas iguais */
+   grid-template-rows: repeat(2, auto);
+   /* 2 linhas */
    gap: 50px;
 
    width: 80%;
@@ -227,7 +239,8 @@ button {
    max-width: 1000px;
 }
 
-.grid-container_Home p, .grid-container_Home a{
+.grid-container_Home p,
+.grid-container_Home a {
    text-align: center;
    padding: 0px;
    margin: 0px;
@@ -239,22 +252,22 @@ button {
    align-content: center;
    cursor: pointer;
    text-decoration: none;
-   color: rgb(0, 0, 0);
+   color: #000000;
    border: solid black 1px;
    border-radius: 15px;
    height: 8rem;
    width: 8rem;
-   background-color: rgb(255, 255, 255);
+   background-color: #ffffff;
    transition: background-color 0.1s ease;
 }
 
 .grid-items_Home:hover {
    background-color: #e4ece4;
-   color: rgb(0, 0, 0);
+   color: #000000;
 }
 
 .grid-items_Home a {
-   color: rgb(0, 0, 0);
+   color: #000000;
 }
 
 #logoMore {
@@ -280,6 +293,7 @@ button {
       margin-left: 0;
       margin-top: 10dvh;
    }
+
    .content-pages {
       width: 99.99%;
       margin-left: 0;
@@ -311,6 +325,7 @@ button {
       margin-top: 10dvh;
       overflow-y: auto;
    }
+
    .content-pages {
       width: 99.99%;
       margin-left: 0;
@@ -357,8 +372,10 @@ button {
       margin-left: 90px;
       margin-top: 10dvh;
    }
+
    .content-pages {
-      width: calc(100dvw - 90px); /* 180 -> 100 */
+      width: calc(100dvw - 90px);
+      /* 180 -> 100 */
       margin-left: 90px;
       padding: 24px;
    }
@@ -384,10 +401,12 @@ button {
       margin-left: 90px;
       margin-top: 10dvh;
    }
+
    .content-pages {
-      width: calc(100dvw - 90px); /* 180 -> 100 */
+      width: calc(100dvw - 90px);
+      /* 180 -> 100 */
       margin-left: 90px;
-      padding: 24px;
+      padding: 15px;
    }
 
    .gridBoxOtherOptions {
@@ -411,8 +430,10 @@ button {
       margin-left: 300px;
       margin-top: 10vh;
    }
+
    .content-pages {
-      width: calc(100dvw - 300px); /* 340 -> 300 */ 
+      width: calc(100dvw - 300px);
+      /* 340 -> 300 */
       margin-left: 300px;
       padding: 40px;
    }

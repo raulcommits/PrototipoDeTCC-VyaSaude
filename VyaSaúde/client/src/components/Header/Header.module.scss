@@ -10,11 +10,13 @@
    z-index: 1000;
    padding: 2vh;
    border-bottom: solid .5vh #3B653C;
-   background: linear-gradient(to right, rgb(93, 138, 93), rgb(113, 152, 184));
+   background: linear-gradient(to right, #5d8a5d, #7198b8);
    
    .logo_div{
       display: flex;
       height: 5vh;
+
+      @extend .cursorPointer;
    }
    
    .accountmenu_div {

@@ -1,0 +1,47 @@
+@use "variables" as *;
+
+// Mixin para aplicar a fonte primária (Inter)
+@mixin font-primary($weight: $fw-regular, $size: null) {
+	font-family: $font-primary;
+	font-weight: $weight;
+	letter-spacing: -0.2px;
+
+	@if $size {
+		font-size: $size;
+	}
+}
+
+// Mixin para aplicar a fonte secundária (Montserrat)
+@mixin font-secondary($weight: $fw-extra-bold, $size: null) {
+	font-family: $font-secondary;
+	font-weight: $weight;
+	font-optical-sizing: auto;
+	color: $verde-escuro;
+
+	@if $size {
+		font-size: $size;
+	}
+}
+
+@mixin flex-center {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+
+@mixin svg {
+	color: white;
+}
+
+@mixin box-shadow($args...) {
+	-webkit-box-shadow: $args;
+	-moz-box-shadow: $args;
+	box-shadow: $args;
+}
+
+@mixin transition-box-shadow($duration: 0.3s, $timing: ease-in-out) {
+	transition:
+		box-shadow $duration $timing,
+		-webkit-box-shadow $duration $timing,
+		-moz-box-shadow $duration $timing;
+}

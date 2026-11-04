@@ -1,0 +1,68 @@
+/* NavBar - Visível apenas em telas mobile (até 764px) */
+@media (max-width: 887px) {
+	.navbar {
+		margin-top: 83vh;
+		display: flex;
+		position: fixed;
+		bottom: 0;
+		width: 100dvw;
+		height: 10vh;
+		background-color: #3b653c;
+		z-index: 1;
+		border-top: 1px solid #0000001a;
+	}
+
+	.container {
+		display: flex;
+		width: 100%;
+		height: 100%;
+		justify-content: space-around;
+		align-items: center;
+		gap: 0;
+	}
+
+	.item {
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+		justify-content: center;
+		height: 100%;
+		flex: 1;
+		text-decoration: none;
+		color: #ffffff;
+		transition: background-color 0.3s ease;
+		padding: 0;
+		border-radius: 0;
+	}
+
+	.item:hover {
+		background-color: #4c774db3;
+	}
+
+	.item.active {
+		background-color: #4c774d;
+	}
+
+	.icon {
+		height: 30px;
+		width: 30px;
+		margin-bottom: 4px;
+		object-fit: contain;
+	}
+
+	.label {
+		font-size: 10px;
+		font-weight: 600;
+		white-space: nowrap;
+		overflow: hidden;
+		text-overflow: ellipsis;
+		max-width: 100%;
+	}
+}
+
+/* NavBar - Oculta em telas maiores */
+@media (min-width: 887px) {
+	.navbar {
+		display: none;
+	}
+}

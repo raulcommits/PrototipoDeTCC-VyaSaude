@@ -1,0 +1,7 @@
+allowBuilds:
+  '@mui/x-telemetry': true
+  '@parcel/watcher': false
+  esbuild: true
+minimumReleaseAgeExclude:
+  - baseline-browser-mapping@2.11.33
+  - electron-to-chromium@1.5.464

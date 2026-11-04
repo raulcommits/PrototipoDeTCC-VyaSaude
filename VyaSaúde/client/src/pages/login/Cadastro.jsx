@@ -1,4 +1,4 @@
-import '../../App.css';
+import '../../App.scss';
 import './Login.css';
 import api from '../../services/api.js';
 import { Form } from 'react-bootstrap';

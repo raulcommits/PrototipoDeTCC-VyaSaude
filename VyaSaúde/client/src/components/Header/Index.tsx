@@ -1,9 +1,9 @@
-import './Index.css';
+import styles from "./Header.module.scss";
 import { getUser } from '../../helpers/auth.ts';
 import { useNavigate } from 'react-router-dom';
 import { useCallback, useEffect, useState } from 'react';
-import logo from "../../../public/logo.svg";
-import placeholder from "../../../public/placeholder.png";
+import logo from "@icons/logo.svg";
+import placeholder from "@icons/placeholder.png";
 import { IoMdExit } from "react-icons/io";
 
 interface Usuario {
@@ -63,18 +63,18 @@ function Header() {
 
 
    return (
-      <header className='header'>
-         <div className='logo_div cursorPointer' onClick={homeNavigate}>
+      <header className={styles.header}>
+         <div className={styles.logo_div} onClick={homeNavigate}>
             <img src={logo} alt="Logo" />
-            <div className="titulosEstilo2 tituloLogo">VyaSaúde</div>
+            <div className={styles.tituloLogo}>VyaSaúde</div>
          </div>
-         <div className='accountmenu_div'>
+         <div className={styles.accountmenu_div}>
             {/* <p>Tempo restante da sessão: {tempoRestante}</p> */}
-            <div className='cursorPointer' onClick={profileNavigate}>
-               <img className='accountmenu_img' src={placeholder} alt="Placeholder" />
+            <div className={styles.cursorPointer} onClick={profileNavigate}>
+               <img className={styles.accountmenu_img} src={placeholder} alt="Placeholder" />
             </div>
             <span>{usuario?.nome}</span>
-            <div className='cursorPointer' onClick={handleLogout}>
+            <div className={styles.cursorPointer} onClick={handleLogout}>
                <IoMdExit color="white" size={50} />
             </div>
          </div>

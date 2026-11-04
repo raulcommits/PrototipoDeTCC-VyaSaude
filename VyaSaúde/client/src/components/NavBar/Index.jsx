@@ -1,6 +1,5 @@
-import React from 'react';
 import { Link, useLocation } from 'react-router-dom';
-import './Index.css';
+import styles from './NavBar.module.scss';
 
 const NavBar = ({ items = [] }) => {
   const location = useLocation();
@@ -11,17 +10,17 @@ const NavBar = ({ items = [] }) => {
   };
 
   return (
-    <nav className="navbar">
-      <div className="navbar-container">
+    <nav className={styles.navbar}>
+      <div className={styles.container}>
         {items.map((item, index) => (
           <Link
             key={index}
             to={item.href}
-            className={`navbar-item ${isActive(item.href) ? 'active' : ''}`}
+            className={`{styles.item${isActive(item.href) ? 'active' : ''}}`}
             title={item.label}
           >
-            {item.icon && <img src={item.icon} alt={item.label} className="navbar-icon" />}
-            <span className="navbar-label">{item.label}</span>
+            {item.icon && <img src={item.icon} alt={item.label} className={styles.icon} />}
+            <span className={styles.label}>{item.label}</span>
           </Link>
         ))}
       </div>

@@ -1,6 +1,6 @@
 import React from "react";
 import { Link } from "react-router-dom";
-import'../../App.css';
+import'../../App.scss';
 import "./Index.css";
 import WipIcon from "./wip.png"; // Substitua pelo caminho do seu ícone de ajuda
 

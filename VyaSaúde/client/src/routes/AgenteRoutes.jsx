@@ -13,7 +13,6 @@ import Agente_Historico_Visitas from "../pages/agente/Agente_Historico_Visitas.j
 import Agente_Historico_Consultas from "../pages/agente/Agente_Historico_Consultas.jsx";
 import Agente_Perfil from "../pages/agente/Agente_Perfil.jsx";
 import Agente_Dashboards from "../pages/agente/Agente_Dashboards.jsx";
-import Agente_noPage from "../pages/agente/Agente_noPage.jsx";
 
 export default function AgenteRoutes() {
 	return (
@@ -104,14 +103,6 @@ export default function AgenteRoutes() {
 				element={
 					<AccessControl tipoPermitido="agente">
 						<Agente_Dashboards />
-					</AccessControl>
-				}
-			/>
-			<Route
-				path="/noPage"
-				element={
-					<AccessControl tipoPermitido="agente">
-						<Agente_noPage />
 					</AccessControl>
 				}
 			/>

@@ -1,24 +1,23 @@
 import "./Agente.css";
-import api from '../../services/api.js';
-import { useNavigate } from "react-router-dom";
+import api from '@services/api.js';
 import { useState, useEffect } from "react";
 import { Button } from 'react-bootstrap';
 import { PatternFormat } from "react-number-format";
 import { TextField, InputAdornment, IconButton, Pagination, Stack } from "@mui/material";
 
-import Header from "../../components/Header/Index.jsx";
-import Sidenav from "../../components/Sidenav/Index.tsx";
-import Breadcrumb from "../../components/Breadcrumb/Index.jsx";
-import NavBar from "../../components/NavBar/Index.jsx";
-import HomeAddress from '../../components/Sidenav/iconsSideBar/HomeAddress.png';
-import AddUserMale from '../../components/Sidenav/iconsSideBar/AddUserMale.png';
-import query from '../../components/Sidenav/iconsSideBar/query.png';
-import dashIcon from '../../components/Sidenav/iconsSideBar/dashIcon.png';
+import Header from "@components/Header/Index.jsx";
+import Sidenav from "@components/Sidenav/Index.tsx";
+import PageTitle from "@components/PageTitle/Index.tsx";
+import Breadcrumb from "@components/Breadcrumb/Index.jsx";
+import NavBar from "@components/NavBar/Index.jsx";
+import HomeAddress from '@components/Sidenav/iconsSideBar/HomeAddress.png';
+import AddUserMale from '@components/Sidenav/iconsSideBar/AddUserMale.png';
+import query from '@components/Sidenav/iconsSideBar/query.png';
+import dashIcon from '@components/Sidenav/iconsSideBar/dashIcon.png';
 
-import Modal_NovoRegistro from "../../components/Modal_NovoRegistro/Index.jsx";
-import Modal_DetalhesRegistro from "../../components/Modal_DetalhesRegistro/Index.jsx";
+import Modal_NovoRegistro from "@components/Modal_NovoRegistro/Index.jsx";
+import Modal_DetalhesRegistro from "@components/Modal_DetalhesRegistro/Index.jsx";
 
-import { GoReply } from "react-icons/go";
 import { MdContentPasteSearch } from "react-icons/md";
 import { MdAssignmentAdd } from "react-icons/md";
 import { MdOutlineRefresh } from "react-icons/md";
@@ -26,8 +25,6 @@ import { FaSort, FaSortUp, FaSortDown } from "react-icons/fa";
 import { Search, Clear } from "@mui/icons-material";
 
 function Agente_Historico_Visitas() {
-   const navigate = useNavigate();
-
    const [exibirModal_novoRegistro, setNovoRegistro] = useState(false); // Abertura e fechamento do Modal de Novo Registro
    const [exibirModal_detalhesRegistro, setDetalhesRegistro] = useState(false); // Abertura e fechamento do Modal de Novo Registro
 
@@ -149,10 +146,7 @@ function Agente_Historico_Visitas() {
          <main className="content-pages">
             <div className="content-pages-agente">
                <div className="content-agente_histVisitas" >
-                  <div className="title-pages">
-                     <GoReply onClick={() => navigate(-1)}/>
-                     <h1 className="align-self-center h2 px-5">Consulta de Visitas Domiciliares</h1>
-                  </div>
+                  <PageTitle title="Consulta de Visitas Domiciliares" />
 
                   <div className="cabecalho">
                      <div className="sessao">

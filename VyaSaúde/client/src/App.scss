@@ -66,8 +66,11 @@ button {
    display: flex;
    text-align: center;
    align-items: center;
-   padding: 2dvh 0;
+   // padding: 2dvh 0;
    width: 100%;
+
+   background: linear-gradient(90deg,rgba(255, 255, 255, 1) 0%, rgba(59, 101, 60, 0.15) 50%, rgba(255, 255, 255, 1) 100%);
+   justify-content: space-between;
 
    svg {
       cursor: pointer;
@@ -171,7 +174,7 @@ button {
    margin-top: 10vh;
    height: calc(100vh - 10vh);
    left: 300px;
-   padding: 40px;
+   // padding: 40px;
    /* espaço interno maior para separar do header/sidenav */
    box-sizing: border-box;
 }
@@ -435,7 +438,7 @@ button {
       width: calc(100dvw - 300px);
       /* 340 -> 300 */
       margin-left: 300px;
-      padding: 40px;
+      padding: 24px;
    }
 
    .gridBoxOtherOptions {

@@ -1,17 +1,32 @@
+// Estilos de fontes
 $font-primary: 'Inter', system-ui, sans-serif;
 $font-secondary: 'Montserrat', system-ui, sans-serif;
 
+// Tamanhos de fontes
+$fs-xs:   0.75rem;   // 12px  (Legendas, textos muito pequenos)
+$fs-sm:   0.875rem;  // 14px  (Textos secundários, inputs)
+$fs-base: 1rem;      // 16px  (Texto padrão / Parágrafo / H6)
+$fs-lg:   1.25rem;   // 20px  (Texto de destaque / H5)
+$fs-xl:   1.563rem;  // 25px  (H4)
+$fs-2xl:  1.953rem;  // 31px  (H3)
+$fs-3xl:  2.441rem;  // 39px  (H2)
+$fs-4xl:  3.052rem;  // 49px  (H1)
+$fs-5xl:  3.815rem;  // 61px
+
+// Espessura de fontes
 $fw-regular: 400;
 $fw-medium: 500;
 $fw-semi-bold: 600;
 $fw-bold: 700;
 $fw-extra-bold: 800;
 
+// Cores padrão
 $branco: #fff;
 $cinza-claro: #ECECEC;
 $cinza-escuro: #212529;
-$font-color: #212529;
+$preto: #000000;
 
+// Cores: Tom de azul
 $azul: #0000EE;
 $azul-claro: #cae8ff; // login
 $azul-medio: #bbd9e8; // header
@@ -21,11 +36,15 @@ $azul-acinzentado-medio: #59808F; // cards
 $azul-escuro: #00009E;
 $navy: #292157;
 
+// Cores: Tom de verde
 $verde-claro: #D6F2D6; // login
 $verde-medio: #5d8a5d; //header
 $verde-pastel: #b9dcb9; // cards
 $verde-escuro: #3B653C; // sidenav-corpo
+$verde-acinzentado: #3b653c26; // titulos
 
+// Cores: Gradientes
 $gradient-login: linear-gradient(90deg, $verde-claro 0%, $azul-claro 100%); // login
 $gradient-header: linear-gradient(to right, $verde-medio, $azul-mediano); // header
 $gradient-card: linear-gradient(90deg, $verde-pastel 63%, $azul-acinzentado-medio 100%); // cards
+$gradient-title: linear-gradient(90deg, $branco 0%, $verde-acinzentado 50%, $branco 100%); // titulos

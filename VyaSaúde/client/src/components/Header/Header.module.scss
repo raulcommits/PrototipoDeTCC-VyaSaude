@@ -1,30 +1,39 @@
 .header {
-   display: flex;
-   justify-content: space-between;
-   align-items: center;
+   @include flex($justify: space-between);
    position: fixed;
-   height: 7vh;
+   height: 7dvh;
    width: 100%;
    top: 0;
    left: 0;
    z-index: 1000;
-   padding: 2vh;
-   border-bottom: solid .5vh #3B653C;
+   padding: 0 2dvh;
+   border-bottom: solid .5dvh #3B653C;
    background: linear-gradient(to right, #5d8a5d, #7198b8);
    
-   .logo_div{
+   .logo{
       display: flex;
-      height: 5vh;
+      height: 5dvh;
+      padding: 0 1dvw;
+      @include pointer;
+      
+      &Img {
+         height: 100%;
+      }
 
-      @extend .cursorPointer;
+      &Name {
+         @include font-secondary($fw-semi-bold, $fs-xl);
+         padding-left: 15px;
+      }
+
+      &:hover {
+         @include opacity;
+      }
    }
    
-   .accountmenu_div {
-      display: flex;
+   .accountDiv {
+      @include flex($justify: space-between);
       gap: 7px;
-      justify-content: space-between;
-      align-items: center;
-      height: 5vh;
+      height: 5dvh;
       border-radius: 12px;
       background-color: #a9c6d171;
       width: auto;
@@ -32,29 +41,39 @@
       min-width: 0;
       white-space: nowrap;
       
-      svg {
-         padding: 5px;
-         height: 5.5dvh;
-         width: 4dvw;
+      .user {
+         @include pointer;
+         @include flex;
+         padding: 0 0.7dvw;
+         gap: 7px;
+         
+         &Img {
+            border-radius: 50px;
+            padding: 1dvh;
+            height: 5.5dvh;
+         }
+         
+         &Name {
+            @include font-secondary($fw-regular, $fs-base, $color: $cinza-escuro, $ls: -0.3px);
+         }
+         
+         &:hover {
+            @include opacity;
+         }
       }
-   }
-   
-   .accountmenu_img {
-      border-radius: 50px;
-      padding: 1vh;
-      height: 5.5vh;
-   }
-   
-   .cursorPointer {
-      cursor: pointer;
-   }
-   
-   .tituloLogo {
-      font-size: 25px;
-      color: #D9D9D9;
-      margin-left: 15px;
-      display: flex;
-      align-items: center;
-      justify-content: center;
+
+      .logout {
+         @include pointer;
+         
+         svg {
+            padding: 5px;
+            height: 5.5dvh;
+            width: 4dvw;
+         }
+
+         &:hover {
+            @include opacity;
+         }
+      }
    }
 }

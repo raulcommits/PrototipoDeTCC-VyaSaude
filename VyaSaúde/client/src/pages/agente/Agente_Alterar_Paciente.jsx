@@ -1,23 +1,24 @@
 import "./Agente.css";
-import Header from "../../components/Header/Index.jsx";
-import Sidenav from "../../components/Sidenav/Index.tsx";
-import api from '../../services/api.js';
+import Header from "@components/Header/Index.jsx";
+import Sidenav from "@components/Sidenav/Index.tsx";
+import PageTitle from "@components/PageTitle/Index.tsx";
+import api from '@services/api.js';
 import { useNavigate  } from "react-router-dom";
 import { useState, useEffect } from "react";
 import { Button } from 'react-bootstrap';
 import { PatternFormat } from "react-number-format";
 import { TextField, InputAdornment, IconButton, Pagination, Stack } from "@mui/material";
 
-import Breadcrumb from "../../components/Breadcrumb/Index.jsx";
-import NavBar from "../../components/NavBar/Index.jsx";
-import HomeAddress from '../../components/Sidenav/iconsSideBar/HomeAddress.png';
-import AddUserMale from '../../components/Sidenav/iconsSideBar/AddUserMale.png';
-import query from '../../components/Sidenav/iconsSideBar/query.png';
-import dashIcon from '../../components/Sidenav/iconsSideBar/dashIcon.png';
+import Breadcrumb from "@components/Breadcrumb/Index.jsx";
+import NavBar from "@components/NavBar/Index.jsx";
+import HomeAddress from '@components/Sidenav/iconsSideBar/HomeAddress.png';
+import AddUserMale from '@components/Sidenav/iconsSideBar/AddUserMale.png';
+import query from '@components/Sidenav/iconsSideBar/query.png';
+import dashIcon from '@components/Sidenav/iconsSideBar/dashIcon.png';
 
-import Modal_Agente_DetalhesPaciente from "../../components/Modal_Agente_DetalhesPaciente/Index.jsx";
+import Modal_Agente_DetalhesPaciente from "@components/Modal_Agente_DetalhesPaciente/Index.jsx";
 
-import { GoPersonAdd, GoReply } from "react-icons/go";
+import { GoPersonAdd } from "react-icons/go";
 import { MdContentPasteSearch, MdRefresh } from "react-icons/md";
 import { FaSort, FaSortUp, FaSortDown } from "react-icons/fa";
 import { Search, Clear } from "@mui/icons-material";
@@ -150,10 +151,7 @@ function Agente_Alterar_Paciente() {
             <div className="content-pages-agente">
                <div className="content-agente_altUsuario">
                   <div className="title-pages">
-                     <div>
-                        <GoReply onClick={() => navigate(-1)}/>
-                        <h1 className="align-self-center h2 px-5">Alterar informações de paciente</h1>
-                     </div>
+                     <PageTitle title="Alterar informações de paciente" />
 
                      <div className="title-button">
                         <Button variant="outline-success" className="icons" onClick={() => navigate('/agente/cadastrar-paciente')}>

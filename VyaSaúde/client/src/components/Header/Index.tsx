@@ -1,5 +1,5 @@
 import styles from "./Header.module.scss";
-import { getUser } from '../../helpers/auth.ts';
+import { getUser } from "@helpers/auth.ts";
 import { useNavigate } from 'react-router-dom';
 import { useCallback, useEffect, useState } from 'react';
 import logo from "@icons/logo.svg";
@@ -64,17 +64,17 @@ function Header() {
 
    return (
       <header className={styles.header}>
-         <div className={styles.logo_div} onClick={homeNavigate}>
-            <img src={logo} alt="Logo" />
-            <div className={styles.tituloLogo}>VyaSaúde</div>
+         <div className={styles.logo} onClick={homeNavigate}>
+            <img className={styles.logoImg} src={logo} alt="Logo" />
+            <div className={styles.logoName}>VyaSaúde</div>
          </div>
-         <div className={styles.accountmenu_div}>
+         <div className={styles.accountDiv}>
             {/* <p>Tempo restante da sessão: {tempoRestante}</p> */}
-            <div className={styles.cursorPointer} onClick={profileNavigate}>
-               <img className={styles.accountmenu_img} src={placeholder} alt="Placeholder" />
+            <div className={styles.user} onClick={profileNavigate}>
+               <img className={styles.userImg} src={placeholder} alt="Placeholder" />
+               <span className={styles.userName}>{usuario?.nome}</span>
             </div>
-            <span>{usuario?.nome}</span>
-            <div className={styles.cursorPointer} onClick={handleLogout}>
+            <div className={styles.logout} onClick={handleLogout}>
                <IoMdExit color="white" size={50} />
             </div>
          </div>

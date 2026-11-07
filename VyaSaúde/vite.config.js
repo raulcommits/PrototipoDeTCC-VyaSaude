@@ -12,6 +12,7 @@ export default defineConfig({
 			"@": path.resolve(import.meta.dirname, "client/src"),
 			"@hooks": path.resolve(import.meta.dirname, "client/src/hooks"),
 			"@api": path.resolve(import.meta.dirname, "client/src/api"),
+			"@helpers": path.resolve(import.meta.dirname, "client/src/helpers"),
 			"@pages": path.resolve(import.meta.dirname, "client/src/pages"),
 			"@services": path.resolve(import.meta.dirname, "client/src/services"),
 			"@components": path.resolve(import.meta.dirname, "client/src/components"),

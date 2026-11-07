@@ -1,17 +1,18 @@
 import "./Agente_dashboards.css";
-import Header from "../../components/Header/Index.jsx";
-import Sidenav from "../../components/Sidenav/Index.tsx";
+import Header from "@components/Header/Index.jsx";
+import Sidenav from "@components/Sidenav/Index.tsx";
+import PageTitle from "@components/PageTitle/Index.tsx";
 import { Link } from "react-router-dom";
-import ButtonBack from "../../components/ButtonBack/Index.jsx";
-import Breadcrumb from "../../components/Breadcrumb/Index.jsx";
-import NavBar from "../../components/NavBar/Index.jsx";
+import ButtonBack from "@components/ButtonBack/Index.jsx";
+import Breadcrumb from "@components/Breadcrumb/Index.jsx";
+import NavBar from "@components/NavBar/Index.jsx";
 import { useEffect, useState } from 'react';
-import api from '../../services/api.js';
-import HomeAddress from '../../components/Sidenav/iconsSideBar/HomeAddress.png';
-import UserManagerIcon from '../../components/Sidenav/iconsSideBar/UserManagerIcon.png';
-import query from '../../components/Sidenav/iconsSideBar/query.png';
-import dashIcon from '../../components/Sidenav/iconsSideBar/dashIcon.png';
-import SmallBarChart from '../../components/SmallBarChart/SmallBarChart.jsx';
+import api from '@services/api.js';
+import HomeAddress from '@components/Sidenav/iconsSideBar/HomeAddress.png';
+import UserManagerIcon from '@components/Sidenav/iconsSideBar/UserManagerIcon.png';
+import query from '@components/Sidenav/iconsSideBar/query.png';
+import dashIcon from '@components/Sidenav/iconsSideBar/dashIcon.png';
+import SmallBarChart from '@components/SmallBarChart/SmallBarChart.jsx';
 import zoom from '@icons/zoom.svg';
 import close from '@icons/close.svg';
 
@@ -184,15 +185,9 @@ function Agente_Dashboards() {
                { label: 'Dash', href: '/agente_dashboards', icon: dashIcon }
             ]} />
 
-            <main className="content-home" style={{position: "relative", padding: 20}}>
-               <Link to="/Agente_home" className="backButton">
-                  <ButtonBack />
-               </Link>
-
-               <div className="title_Home" style={{marginBottom: 16}}>
-                  <h1><b>Relatórios</b></h1>
-                  <p style={{margin: 0, color: '#666'}}>Visão geral das suas atividades e pacientes.</p>
-               </div>
+            <main className="content-home content-pages-home">
+               <PageTitle title="Relatórios" />
+               {/* <p style={{margin: 0, color: '#666'}}>Visão geral das suas atividades e pacientes.</p> */}
 
                {loading && <div style={{ textAlign: 'center', padding: '50px' }}>Carregando informações...</div>}
 

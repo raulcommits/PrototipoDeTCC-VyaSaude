@@ -1,0 +1,15 @@
+.title {
+	display: grid;
+	text-align: center;
+	align-items: center;
+	grid-template-columns: 1fr 5fr 1fr;
+	width: 100%;
+	@include gradient($gradient-title);
+
+	svg {
+		@include opacity;
+		width: 4rem;
+		height: 2rem;
+		stroke-width: 0.6;
+	}
+}

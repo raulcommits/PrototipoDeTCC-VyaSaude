@@ -1,22 +1,22 @@
 import "./Agente.css";
-import Header from "../../components/Header/Index.jsx";
-import Sidenav from "../../components/Sidenav/Index.tsx";
-import api from '../../services/api.js';
+import Header from "@components/Header/Index.jsx";
+import Sidenav from "@components/Sidenav/Index.tsx";
+import PageTitle from "@components/PageTitle/Index.tsx";
+import api from '@services/api.js';
 import cboData from '../../data/cbo2002_KeyedJson.json';
 import { useNavigate  } from "react-router-dom";
 import { useEffect, useState, useMemo } from 'react';
-import { useVerificarCEP } from '../../hooks/useVerificarCEP.js';
+import { useVerificarCEP } from '@hooks/useVerificarCEP.js';
 import { TextField, Select, MenuItem, FormControl, InputLabel, ListSubheader, Switch, Autocomplete } from "@mui/material";
 import { PatternFormat } from 'react-number-format';
 // import { Button } from 'react-bootstrap';
 
-import Breadcrumb from "../../components/Breadcrumb/Index.jsx";
-import NavBar from "../../components/NavBar/Index.jsx";
-import HomeAddress from '../../components/Sidenav/iconsSideBar/HomeAddress.png';
-import AddUserMale from '../../components/Sidenav/iconsSideBar/AddUserMale.png';
-import query from '../../components/Sidenav/iconsSideBar/query.png';
-import dashIcon from '../../components/Sidenav/iconsSideBar/dashIcon.png';
-import { GoReply } from "react-icons/go";
+import Breadcrumb from "@components/Breadcrumb/Index.jsx";
+import NavBar from "@components/NavBar/Index.jsx";
+import HomeAddress from '@components/Sidenav/iconsSideBar/HomeAddress.png';
+import AddUserMale from '@components/Sidenav/iconsSideBar/AddUserMale.png';
+import query from '@components/Sidenav/iconsSideBar/query.png';
+import dashIcon from '@components/Sidenav/iconsSideBar/dashIcon.png';
 import { toast } from 'react-toastify';
 
 
@@ -244,10 +244,7 @@ function Agente_Cadastrar_Paciente() {
          <main className="content-pages">
             <div className="content-pages-agente">
                <div className="content-agente_cadUsuario">
-                  <div className="title-pages">
-                     <GoReply onClick={() => navigate(-1)}/>
-                     <h1 className="align-self-center h2 px-5">Cadastrar novo paciente</h1>
-                  </div>
+                  <PageTitle title="Cadastrar novo paciente" />
 
                   <div className="elements-agente_cadUsuario">
                      <form id="form-novo_paciente-agente" onSubmit={handleRegister}>

@@ -1,42 +1,75 @@
 @use "variables" as *;
 
-// Mixin para aplicar a fonte primária (Inter)
-@mixin font-primary($weight: $fw-regular, $size: null) {
-	font-family: $font-primary;
+@mixin font-style(
+	$family: $font-primary,
+	$weight: null,
+	$size: null,
+	$color: null,
+	$ls: null,
+	$optical-sizing: auto
+) {
+	font-family: $family;
 	font-weight: $weight;
-	letter-spacing: -0.2px;
-
-	@if $size {
-		font-size: $size;
-	}
+	font-size: $size;
+	color: $color;
+	letter-spacing: $ls;
+	font-optical-sizing: $optical-sizing;
 }
 
-// Mixin para aplicar a fonte secundária (Montserrat)
-@mixin font-secondary($weight: $fw-extra-bold, $size: null) {
-	font-family: $font-secondary;
-	font-weight: $weight;
-	font-optical-sizing: auto;
-	color: $verde-escuro;
-
-	@if $size {
-		font-size: $size;
-	}
+@mixin font-primary(
+	$weight: $fw-regular,
+	$size: null,
+	$color: null,
+	$ls: -0.2px
+) {
+	@include font-style(
+		$family: $font-primary,
+		$weight: $weight,
+		$size: $size,
+		$color: $color,
+		$ls: $ls
+	);
 }
 
-@mixin flex-center {
+@mixin font-secondary(
+	$weight: $fw-bold,
+	$size: null,
+	$color: $branco,
+	$ls: null
+) {
+	@include font-style(
+		$family: $font-secondary,
+		$weight: $weight,
+		$size: $size,
+		$color: $color,
+		$ls: $ls
+	);
+}
+
+@mixin flex($justify: center, $align: center, $text: center) {
 	display: flex;
-	justify-content: center;
-	align-items: center;
+	justify-content: $justify;
+	align-items: $align;
+	text-align: $text;
 }
 
-@mixin svg {
-	color: white;
+@mixin pointer {
+	cursor: pointer;
+}
+
+@mixin opacity {
+	opacity: 0.8;
+	@include pointer;
+}
+
+@mixin gradient($args...) {
+   background: $args;
 }
 
 @mixin box-shadow($args...) {
-	-webkit-box-shadow: $args;
-	-moz-box-shadow: $args;
-	box-shadow: $args;
+   -webkit-box-shadow: $args;
+   -moz-box-shadow: $args;
+   box-shadow: $args;
 }
 
 @mixin transition-box-shadow($duration: 0.3s, $timing: ease-in-out) {

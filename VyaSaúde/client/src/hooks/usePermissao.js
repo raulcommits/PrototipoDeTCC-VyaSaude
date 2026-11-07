@@ -1,4 +1,4 @@
-import { getUser } from "../helpers/auth.ts";
+import { getUser } from "@/auth.ts";
 
 export function usePermissao(tipoPermitido) {
    const usuario = getUser();

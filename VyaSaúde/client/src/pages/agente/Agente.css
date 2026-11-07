@@ -3,6 +3,10 @@
    grid-template-rows: repeat(2, auto) !important;
    padding: 15px; /* 2 linhas */
 }
+.content-pages-home {
+   justify-content: space-between;
+   padding: 24px;
+}
 
 .dashArea {
    display: flex;
@@ -145,6 +149,7 @@
 
          .title-button {
             gap: 20px;
+            text-wrap: nowrap;
 
             button {
                height: 4.5vh;

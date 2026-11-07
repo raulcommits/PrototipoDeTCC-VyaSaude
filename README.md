@@ -38,7 +38,7 @@ O sistema permite:
 ### :art: Frontend
 <div>
   <a href="https://skillicons.dev">
-    <img src="https://skillicons.dev/icons?i=react,vite,js,mui,bootstrap"/>
+    <img src="https://skillicons.dev/icons?i=react,vite,js,mui,bootstrap,sass"/>
   </a>&nbsp;
   <img width="22%" src="https://user-images.githubusercontent.com/5574267/54994574-df4c1380-4fc4-11e9-8509-1d3aedbc7b96.png"/> 
 </div>
@@ -73,7 +73,7 @@ O sistema permite:
 ## :gear: Como rodar?
 Acesse o link abaixo:
 
-[Protótipo VyaSaúde (Vercel)](https://prototipo-vyasaude-e293qz2o9-luizfelipe-git.vercel.app)
+[Protótipo VyaSaúde (Vercel)](https://prototipo-vyasaude.vercel.app)
 
 Disponibilizamos uma conta de agente para fins de testes. Utilize as credenciais:
 ```

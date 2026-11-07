@@ -1,27 +1,23 @@
 import "../../App.scss";
 import "./Agente.css";
-import Header from "../../components/Header/Index.jsx";
-import Sidenav from "../../components/Sidenav/Index.tsx";
-import api from "../../services/api.js";
-import { getUser } from "../../helpers/auth.ts";
+import Header from "@components/Header/Index.jsx";
+import Sidenav from "@components/Sidenav/Index.tsx";
+import PageTitle from "@components/PageTitle/Index.tsx";
+import api from "@services/api.js";
+import { getUser } from "@helpers/auth.ts";
 import { useState, useEffect } from "react";
-import { useNavigate } from "react-router-dom";
 import { TextField } from "@mui/material";
 import { Button } from "react-bootstrap";
 import { PatternFormat } from "react-number-format";
 
-import Breadcrumb from "../../components/Breadcrumb/Index.jsx";
-import NavBar from "../../components/NavBar/Index.jsx";
-import HomeAddress from "../../components/Sidenav/iconsSideBar/HomeAddress.png";
-import AddUserMale from "../../components/Sidenav/iconsSideBar/AddUserMale.png";
-import query from "../../components/Sidenav/iconsSideBar/query.png";
-import dashIcon from "../../components/Sidenav/iconsSideBar/dashIcon.png";
-
-import { GoReply } from "react-icons/go";
+import Breadcrumb from "@components/Breadcrumb/Index.jsx";
+import NavBar from "@components/NavBar/Index.jsx";
+import HomeAddress from "@components/Sidenav/iconsSideBar/HomeAddress.png";
+import AddUserMale from "@components/Sidenav/iconsSideBar/AddUserMale.png";
+import query from "@components/Sidenav/iconsSideBar/query.png";
+import dashIcon from "@components/Sidenav/iconsSideBar/dashIcon.png";
 
 function Agente_Perfil() {
-	const navigate = useNavigate();
-
 	const [usuario, setUsuario] = useState(undefined);
 
 	const [modoEdicao, setModoEdicao] = useState(false);
@@ -142,15 +138,7 @@ function Agente_Perfil() {
 			<main className="content-pages">
 				<div className="content-pages-agente ">
 					<div className="content-agente_perfil">
-						<div className="title-pages">
-							<GoReply
-								onClick={() => {
-									(setModoEdicao(false), navigate(-1));
-								}}
-							/>
-							<h1 className="align-self-center h2 px-5">Meu Perfil</h1>
-						</div>
-						{/* <ButtonBack text="Meu Perfil"/> */}
+                  <PageTitle title="Meu Perfil" onClick={() => {setModoEdicao(false)}} />
 
 						<div className="elements-agente_perfil">
 							<span className="h4 text-success">Registro</span>
